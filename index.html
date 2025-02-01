@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<title></title>
+</head>
+<body>
+
+<style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            font-family: Gill Sans;
+            background-image: url(https://wallpapers.com/images/hd/serene-wild-landscape-uj2tqjfexxzjqc7s.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+    
+        }
+        
+        .answer {
+            display: none;
+            color: green;
+        }
+
+h1, h3, p{
+
+	text-shadow: 2px 2px 4px black;
+	color: white;
+}
+
+}
+    </style>
+</head>
+<body>
+	<br>
+    <div class="container">
+    	<h1 class="fw-bold">Compute the following:</h2>
+        <h1 class="fw-bold">If x = 4 and y = 16</h2>
+        <br>
+        
+        <div>
+            <h3>Arithmetic Operator</h3>
+            <p>A. Exponent: <span id="exp" class="answer"></span></p>
+            <p>B. Mod: <span id="mod" class="answer"></span></p>
+            <button class="btn btn-primary" onclick="showAnswer('exp', 4 ** 16); showAnswer('mod', 4 % 16);">Show Answer</button>
+        </div>
+        <br>
+        
+        <div>
+            <h3>Comparison Operator</h3>
+            <p>A. is x greater than y? : <span id="greater" class="answer"></span></p>
+            <p>B. is x equal to y? : <span id="equal" class="answer"></span></p>
+            <button class="btn btn-success" onclick="showAnswer('greater', 4 > 16); showAnswer('equal', 4 === 16);">Show Answer</button>
+        </div>
+        <br>
+        
+        <div>
+            <h3>Logical Operator</h3>
+            <p>A. (x &lt;= y) &amp;&amp; (x &gt;= y) : <span id="logical1" class="answer"></span></p>
+            <p>B. (x != y) || (x == y) : <span id="logical2" class="answer"></span></p>
+            <button class="btn btn-warning" onclick="showAnswer('logical1', (4 <= 16) && (4 >= 16)); showAnswer('logical2', (4 != 16) || (4 == 16));">Show Answer</button>
+        </div>
+    </div>
+    
+    
+    <script>
+        function showAnswer(id, value) {
+            document.getElementById(id).innerHTML = value;
+            document.getElementById(id).style.display = "inline";
+        }
+    </script>
+
+    <br>
+
+    <center><h6><a href="https://wallpapers.com/nature-reserves">Sources!</a></h6></center>
+
+
+</body>
+</html>
